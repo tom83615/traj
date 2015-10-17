@@ -1,7 +1,13 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+    <head>
+        <meta content ="text/html; charset=utf8" http-equiv ="Content-type">
+        <title>風場模擬</title>
+    </head>
 <?php
-    include('datainput.php');
-    include('class.php');
-    include('windengine_lib.php');
+    include 'datainput.php';
+    include '../windmap/class.php';
+    include '../windmap/windengine_lib.php';
 
     $center = array(
             'date' => $_GET['date'],
@@ -13,9 +19,9 @@
             );
     $factor = array(
         'earthRadius' => 6371000,//approximate radius of earth in meters (average value)
-        'correction_factor' => 0.6,
+        'correction_factor' => 0.55,
         'wpp_law_exponent' => 1/7,
-        'select_error' => 0.01
+        'select_error' => 0.04
         );
     if($center['lat']<21.958069||$center['lat']>26.160469 || $center['lon']<118.312256||$center['lon']>121.792928)
         die('Error:out to limit');
@@ -24,7 +30,7 @@
 
     //the input data will be like follow
     //$site =  array(
-    //    $sitename_1 => array(
+    //    'sitename_1' => array(
     //        'ws' = '', //wind speed
     //        'wd' = '', //wind direc
     //        'lat' = '', //Latitude
@@ -32,7 +38,7 @@
     //        'alt' = '', //Altitude
     //        'sph' = '', //Sampling port height
     //        ),
-    //    $sitename_2 => array(
+    //    'sitename_2' => array(
     //        'ws' = '',
     //        'wd' = '',
     //        'lat' = '',
@@ -62,7 +68,8 @@
         $test = false;
     else
         $test = $_GET['test'];
-    $data = json_encode( windengine($center,$sitedata,$factor,$test) );
+    $data =  windengine($center,$sitedata,$factor,$test);
     print_r($data);
 
 ?>
+</html>
