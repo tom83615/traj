@@ -3,7 +3,6 @@ class location
 {
     public $lat;
     public $lon;
-    public $alt;
     public $ws;
     public $wd;
     public $distance = array();
@@ -42,7 +41,6 @@ class Site extends location
         $this->wd = $input['wd'];
         $this->lat = $input['lat'];
         $this->lon = $input['lon'];
-        $this->alt = $input['alt'];
         $this->sph = $input['sph'];
         $this->set_distance($allsite,$factor);
     }
@@ -80,7 +78,6 @@ class Target extends location
     {
         $this->lat = $input['lat'];
         $this->lon = $input['lon'];
-        $this->alt = $input['alt'];
         $this->wh = $input['wh'];
         $this->set_distance($allsite,$factor);
         asort($this->distance);
