@@ -14,7 +14,6 @@
             'time' => $_GET['time'],
             'lat' => $_GET['lat'],
             'lon' => $_GET['lon'],
-            'alt' => $_GET['alt'],
             'wh' => $_GET['wh']
             );
     $factor = array(

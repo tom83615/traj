@@ -79,7 +79,7 @@
             }
             function todb($data)//進資料庫
             {
-                set_time_limit ( 0 ); //不得已 真他媽跑太久
+                set_time_limit ( 0 ); //不得已跑太久，必須重設最長時間
                 $kind = array(
                     'wd' => '風向',
                     'ws' => '風速',
