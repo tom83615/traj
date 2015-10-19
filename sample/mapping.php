@@ -1,11 +1,16 @@
 <?php
-    include 'datainput.php';
     include '../windmap/class.php';
     include '../windmap/windengine_lib.php';
     if($_GET['t'] == 'now')
+    {
+        include 'datainput_crawler.php';
         $time = get_web_time();
+    }
     else
+    {
+        include 'datainput.php';
         $time = strtotime($_GET['t']);
+    }
     $center = array(
             'date' => date("Y/m/d",$time),
             'time' => date("G",$time),

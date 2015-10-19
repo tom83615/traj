@@ -5,7 +5,7 @@
         <title>風場模擬</title>
     </head>
 <?php
-    include 'datainput.php';
+    include 'datainput_crawler.php';
     include '../windmap/class.php';
     include '../windmap/windengine_lib.php';
 
