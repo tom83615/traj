@@ -106,7 +106,8 @@
 ####statistics.php
 用於計算相關係數
 
-####windengine_lib.php這個檔案有4個子程式：
+####windengine_lib.php
+這個檔案有4個子程式：
 
 *    wpp_law：用來對不同高度風速進行修正。
 *    concentrat：用來計算距離內側站數量，密集度權重所需要的參數。
