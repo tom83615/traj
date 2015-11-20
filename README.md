@@ -9,7 +9,7 @@
 >3.  不考慮地形起伏 
 >4.  只適用於地表風
 
->有興趣了解其運作內容可以看[此投影片](http://www.slideshare.net/tom83615/ss-53119639)
+有興趣了解其運作內容可以看[此投影片](http://www.slideshare.net/tom83615/ss-53119639)
 
 ##以下說明各資料夾內容及檔案
 
@@ -37,11 +37,13 @@
 橫向縱向各分割20個點，
 產生出R語言程式碼(請先安裝RgoogleMaps)。
 使用以下方法
+
 >取用資料庫資料：
 >http://[主機]/[資料夾]/sample/mapping.php?t=[yyyy-mm-dd tt:00]
 
 >使用爬蟲取回資料：
 >http://[主機]/[資料夾]/sample/mapping.php?t=now
+
 #### sample_crawler.php
 指定單一經緯度使用爬蟲取回即時資料，
 回傳資料為
@@ -91,6 +93,7 @@
 
 使用以下方法
 >http://[主機]/[資料夾]/testfile/random.php?n=[指定數值]
+
 ###windmap
 
 ####class.php
